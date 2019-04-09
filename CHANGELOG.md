@@ -8,6 +8,12 @@ __Git Changelog__
 
 ---
 
+## Bug Fixes
+
+- **changelog:** changed configuration of changelog
+  ([1941d74e](https://github.com/zdoonio/social-book/commit/1941d74ebda4a2848e35b9c29b3f3dafbb58c5fc))
+
+
 ## Features
 
 - **changelog:** configure changelog tools
