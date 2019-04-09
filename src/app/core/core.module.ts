@@ -7,6 +7,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import {PostsModule} from '../posts/posts.module';
 import { registerLocaleData } from '@angular/common';
 import localePL from '@angular/common/locales/pl'
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 registerLocaleData(localePL);
 
@@ -19,7 +20,8 @@ registerLocaleData(localePL);
     BrowserModule,
     CoreRoutingModule,
     PostsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientTestingModule
   ],
   providers: [
     {
