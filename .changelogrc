@@ -3,10 +3,10 @@
     "logo": "https://github.com/rafinskipg/git-changelog/raw/master/images/git-changelog-logo.png",
     "intro": "",
     "branch" : "",
-    "repo_url": "",
+    "repo_url": "https://github.com/zdoonio/social-book",
     "version_name" : "",
     "file": "CHANGELOG.md",
-    "template": "myCustomTemplate.md",
+    "template": "",
     "sections": [
         {
             "title": "Bug Fixes",
