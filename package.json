@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "changelog": "git-changelog",
+    "changelog": "git-changelog -e",
     "predeploy": "ng build --base-href=/social-book/",
     "deploy": "gh-pages -d dist/facebook/"
   },
