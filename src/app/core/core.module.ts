@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {LOCALE_ID, NgModule} from '@angular/core';
-
 import { CoreRoutingModule } from './core-routing.module';
 import { AppComponent } from './components/app/app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import {PostsModule} from '../posts/posts.module';
-import {registerLocaleData} from '@angular/common';
+import { registerLocaleData } from '@angular/common';
 import localePL from '@angular/common/locales/pl'
 
-registerLocaleData(localePL)
+registerLocaleData(localePL);
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ registerLocaleData(localePL)
   imports: [
     BrowserModule,
     CoreRoutingModule,
-    PostsModule
+    PostsModule,
+    HttpClientModule
   ],
   providers: [
     {
