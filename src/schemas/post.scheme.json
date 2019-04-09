@@ -1,0 +1,80 @@
+{
+  "id": "posts",
+  "type": "object",
+  "required": [
+    "posts"
+  ],
+  "properties": {
+    "posts": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "created_time",
+          "author",
+          "body",
+          "images"
+        ],
+        "properties": {
+          "id": {
+            "chance": {
+              "guid": {}
+            }
+          },
+          "created_time": {
+            "type": "string",
+            "faker": {
+              "fake": "{{date.past}}"
+            }
+          },
+          "author": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "avatar_url"
+            ],
+            "properties": {
+              "id": {
+                "chance": {
+                  "guid": {}
+                }
+              },
+              "name": {
+                "type": "string",
+                "faker": {
+                  "fake": "{{name.firstName}} {{name.lastName}}"
+                }
+              },
+              "avatar_url": {
+                "type": "string",
+                "faker": {
+                  "fake": "{{image.avatar}}"
+                }
+              }
+            }
+          },
+          "body": {
+            "chance": {
+              "paragraph": {
+                "sentences": 1
+              }
+            }
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "faker": {
+                "fake": "{{image.image}}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
