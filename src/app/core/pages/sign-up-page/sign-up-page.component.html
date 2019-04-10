@@ -1,0 +1,98 @@
+<div
+  *ngIf="isRegistrationSuccess"
+  class="alert alert-success registration-result-message"
+  role="alert"
+>
+  Dziękujemy za rejestrację!
+</div>
+
+<div *ngIf="!isRegistrationSuccess">
+  <form
+    [formGroup]="registerForm"
+    (ngSubmit)="handleSubmit()"
+  >
+    <div class="form-group">
+      <label>
+        E-mail
+        <sup class="text-danger">*</sup>
+      </label>
+      <input
+        required
+        type="email"
+        class="form-control field-email"
+        name="email"
+        formControlName="email"
+      >
+      <small class="text-danger"></small>
+    </div>
+
+    <div class="form-group">
+      <label>
+        Hasło
+        <sup class="text-danger">*</sup>
+      </label>
+      <input
+        required
+        type="password"
+        class="form-control field-password"
+        name="password"
+        formControlName="password"
+      >
+      <small class="text-danger"></small>
+    </div>
+
+    <div class="form-group">
+      <label>
+        Potwierdzenie hasła
+        <sup class="text-danger">*</sup>
+      </label>
+      <input
+        required
+        type="password"
+        class="form-control field-confirmation-password"
+        name="password-confirmation"
+        formControlName="confirmPassword"
+      >
+      <small class="text-danger"></small>
+    </div>
+
+    <div formGroupName="person">
+      <div class="form-group">
+        <label>
+          Imię
+          <sup class="text-danger">*</sup>
+        </label>
+        <input
+          required
+          type="name"
+          class="form-control field-person-name"
+          name="name"
+          formControlName="name"
+        >
+        <small class="text-danger"></small>
+      </div>
+
+      <div class="form-group">
+        <label>
+          Nazwisko
+          <sup class="text-danger">*</sup>
+        </label>
+        <input
+          required
+          type="surname"
+          class="form-control field-person-surname"
+          name="surname"
+          formControlName="surname"
+        >
+        <small class="text-danger"></small>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary submit-form"
+    >
+      Zarejestruj się
+    </button>
+  </form>
+</div>

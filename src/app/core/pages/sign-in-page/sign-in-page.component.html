@@ -1,0 +1,95 @@
+<div
+  *ngIf="errorMessage"
+  class="alert alert-danger login-result-message"
+  role="alert"
+>
+  {{ errorMessage }}
+</div>
+
+<div>
+  <form
+    (ngSubmit)="handleSubmit()"
+    #loginForm="ngForm"
+    novalidate
+  >
+    <div class="form-group">
+      <label>
+        E-mail
+        <sup class="text-danger">*</sup>
+      </label>
+      <input
+        required
+        type="email"
+        class="form-control field-email"
+        #email="ngModel"
+        [(ngModel)]="user.email"
+        [class.is-invalid]="email.invalid && email.touched"
+        name="email"
+        maxlength="50"
+        minlength="3"
+      >
+      <!-- <pre>{{ email.errors | json }}</pre> -->
+      <small
+        class="text-danger"
+        *ngIf="email.touched"
+      >
+                <span *ngIf="email.errors?.required">
+                    Pole
+                    <em>email</em>
+                    jest puste
+                </span>
+        <span *ngIf="email.errors?.maxlength">
+                    Pole
+                    <em>email</em>
+                    jest za długie
+                </span>
+        <span *ngIf="email.errors?.minlength">
+                    Pole
+                    <em>email</em>
+                    za krótkie
+                </span>
+      </small>
+    </div>
+    <div class="form-group">
+      <label>
+        Hasło
+        <sup class="text-danger">*</sup>
+      </label>
+      <input
+        required
+        type="password"
+        class="form-control field-password"
+        #password="ngModel"
+        [(ngModel)]="user.password"
+        name="password"
+      >
+      <!-- <pre>{{ password.errors | json }}</pre> -->
+      <small
+        class="text-danger"
+        *ngIf="password.touched"
+      >
+                <span *ngIf="password.errors?.required">
+                    Pole
+                    <em>password</em>
+                    jest puste
+                </span>
+        <span *ngIf="password.errors?.maxlength">
+                    Pole
+                    <em>password</em>
+                    jest za długie
+                </span>
+        <span *ngIf="password.errors?.minlength">
+                    Pole
+                    <em>password</em>
+                    za krótkie
+                </span>
+      </small>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary submit-form"
+      [disabled]="loginForm.invalid"
+    >
+      Zaloguj się
+    </button>
+  </form>
