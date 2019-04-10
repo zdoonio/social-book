@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostListItemComponent } from './post-list-item.component';
-import {Post} from '../../interfaces/post.interface';
-import {PostsService} from '../../services/posts.service';
+import {Post} from '../../../posts/interfaces/post.interface';
+import {PostsService} from '../../../posts/services/posts.service';
 import {HttpClientModule} from '@angular/common/http';
 import {PostListComponent} from '../post-list/post-list.component';
 

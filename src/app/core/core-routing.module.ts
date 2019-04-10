@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePageComponent
+  },
+  {
+    path: 'posts',
+    loadChildren: '../posts/posts.module#PostsModule'
   }
 ];
 

@@ -1,9 +1,9 @@
-<div class="card">
+<div class="card" *ngIf="post">
   <div class="card-header">
     <h5>
-      <a [href]="getAuthorLink()"> {{ post.author.name }} </a>
+      <a [routerLink]="getAuthorLink()"> {{ post.author.name }} </a>
     </h5>
-    <a [href]="getPostLink()"> {{ post.created_time | date: "fullDate" }} </a>
+    <a [routerLink]="getPostLink()"> {{ post.created_time | date: "fullDate" }} </a>
   </div>
     <img [src]="post.images[0]" class="card-img-top" alt="...">
     <div class="card-body">
