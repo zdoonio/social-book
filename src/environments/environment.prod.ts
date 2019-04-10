@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  postsUrl: '/assets/posts.json'
+  postsUrl: '/social-book/assets/posts.json'
 };
