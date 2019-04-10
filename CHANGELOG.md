@@ -1,3 +1,15 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/zdoonio/social-book/compare/v1.0.3...v2.0.0) (2019-04-10)
+
+
+### Features
+
+* **cache:** create http inceptor with cache service ([bfe9d87](https://github.com/zdoonio/social-book/commit/bfe9d87))
+* **users:** added sing up and sing in strategy ([30b31b9](https://github.com/zdoonio/social-book/commit/30b31b9))
+* **users:** displayed user page ([3635535](https://github.com/zdoonio/social-book/commit/3635535))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/zdoonio/social-book/compare/v1.0.2...v1.0.3) (2019-04-10)
 
