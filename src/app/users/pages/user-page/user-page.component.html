@@ -1,3 +1,7 @@
+<p *ngIf="user$ | async">
+  User jest gotowy do działania
+</p>
+
 <ng-container *ngIf="user; else loading" >
   <div class="media">
     <img class="mr-3" [src]="user.avatar_url" alt="Generic placeholder image">
