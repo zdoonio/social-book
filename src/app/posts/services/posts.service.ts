@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {PostsResponse } from '../interfaces/responses/posts-response.interface';
+import {PostsResponse } from '../../shared/interfaces/responses/posts-response.interface';
 import {environment} from '../../../environments/environment';
 import {filter, map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
-import {Post} from '../interfaces/post.interface';
+import {Post} from '../../shared/interfaces/post.interface';
 
 @Injectable({
   providedIn: 'root'

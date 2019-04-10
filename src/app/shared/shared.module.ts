@@ -12,6 +12,6 @@ import {RouterModule} from '@angular/router';
   imports: [
     CommonModule,
     RouterModule
-  ], exports: [PostListComponent, PostListItemComponent,],
+  ], exports: [PostListComponent, PostListItemComponent],
 })
 export class SharedModule { }

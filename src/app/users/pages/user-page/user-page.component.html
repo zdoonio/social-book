@@ -1,0 +1,16 @@
+<ng-container *ngIf="user; else loading" >
+  <div class="media">
+    <img class="mr-3" [src]="user.avatar_url" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0">{{user.name}}</h5>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <p>Trwa ładowanie użytkownika...</p>
+</ng-template>
+
+<ng-container *ngIf="error">
+  <p>Użytkownik niedostępny!</p>
+</ng-container>

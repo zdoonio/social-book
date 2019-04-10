@@ -1,14 +1,10 @@
+import {User} from './user.interface';
+
 export interface Post
 {
   id: string;
   created_time: string;
-  author: Author;
+  author: User;
   body: string;
   images: string[];
-}
-
-interface Author {
-  id: string;
-  name: string;
-  avatar_url: string;
 }

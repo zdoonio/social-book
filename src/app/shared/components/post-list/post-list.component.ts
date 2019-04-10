@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PostsService} from '../../../posts/services/posts.service';
-import {Posts} from '../../../posts/interfaces/posts.interface';
+import {Posts} from '../../interfaces/posts.interface';
 
 @Component({
   selector: 'app-post-list',
@@ -26,7 +26,6 @@ export class PostListComponent implements OnInit {
       .subscribe({
         next: (response) => {
           this.posts = response.posts;
-          console.log(response);
         },
         error: (err) => {
           console.log(err);

@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
-import {Post} from '../../../posts/interfaces/post.interface';
+import {Post} from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-post-list-item',
